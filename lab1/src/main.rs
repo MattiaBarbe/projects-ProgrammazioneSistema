@@ -1,19 +1,16 @@
-mod cli;
+//use std::fs::File;
+//use std::io::{BufRead,BufReader};
+//use std::process::exit;
+use std::{env::args, process::exit};
 mod io;
-use std::fs::File;
-use std::io::{BufRead,BufReader};
-use std::process::exit;
-use std::env::args;
+mod cli;
 fn main() {
-    let args: Vec<String>=args().collect();
-    
-    if(args.len()==1){
-        println!("non hai inserito il percorso del file");
-        
-    }
-    else{
-
-    }
-    let path=&args[1];
+    let (file, head) = match cli::parseArg() {
+        Ok(v) => v,
+        Err(e) => {
+            eprintln!("Errore: {}", e);
+            process::exit(1);
+        }
+    };
     
 }

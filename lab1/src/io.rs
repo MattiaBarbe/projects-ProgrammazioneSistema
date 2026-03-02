@@ -1,3 +1,3 @@
-pub fn leggi(file:&str, righe:i32) -> (){
-
+pub fn leggi(path:&str,n:&str) {
+    print!("{}",path)
 }
