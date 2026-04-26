@@ -1,60 +1,53 @@
     Blocking waiting for file lock on package cache
     Blocking waiting for file lock on package cache
-   0.023471600s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1) target="enum1"}: cargo::core::compiler::fingerprint: fingerprint error for enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1)/Check { test: false }/TargetInner { name: "enum1", doc: true, ..: with_path("C:\\Users\\Admin\\Desktop\\Poli\\ProgrammazioneDiSistema\\projects\\enum1\\src\\main.rs", Edition2024) }
-   0.026523500s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1) target="enum1"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1\target\debug\.fingerprint\enum1-22fe488e2de05080\bin-enum1`
+    Blocking waiting for file lock on package cache
+   0.008098792s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1) target="enum1"}: cargo::core::compiler::fingerprint: fingerprint error for enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1)/Check { test: false }/TargetInner { name: "enum1", doc: true, ..: with_path("/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1/src/main.rs", Edition2024) }
+   0.008120417s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1) target="enum1"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1/target/debug/.fingerprint/enum1-df1703991b1c77c9/bin-enum1`
 
 Caused by:
-    The system cannot find the file specified. (os error 2)
+    No such file or directory (os error 2)
 
 Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
-   0.049966800s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1) target="enum1"}: cargo::core::compiler::fingerprint: fingerprint error for enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1)/Check { test: true }/TargetInner { name: "enum1", doc: true, ..: with_path("C:\\Users\\Admin\\Desktop\\Poli\\ProgrammazioneDiSistema\\projects\\enum1\\src\\main.rs", Edition2024) }
-   0.049997500s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1) target="enum1"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1\target\debug\.fingerprint\enum1-83dc23205b5a0b1b\test-bin-enum1`
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.018650500s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1) target="enum1"}: cargo::core::compiler::fingerprint: fingerprint error for enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1)/Check { test: true }/TargetInner { name: "enum1", doc: true, ..: with_path("/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1/src/main.rs", Edition2024) }
+   0.018656542s  INFO prepare_target{force=false package_id=enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1) target="enum1"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1/target/debug/.fingerprint/enum1-a15a774000f32a83/test-bin-enum1`
 
 Caused by:
-    The system cannot find the file specified. (os error 2)
+    No such file or directory (os error 2)
 
 Stack backtrace:
-   0: git_midx_writer_dump
-   1: git_midx_writer_dump
-   2: git_midx_writer_dump
-   3: git_midx_writer_dump
-   4: git_filter_source_repo
-   5: git_filter_source_repo
-   6: git_filter_source_repo
-   7: git_filter_source_repo
-   8: git_filter_source_repo
-   9: git_filter_source_repo
-  10: git_filter_source_repo
-  11: git_libgit2_prerelease
-  12: <unknown>
-  13: <unknown>
-  14: <unknown>
-  15: <unknown>
-  16: git_midx_writer_dump
-  17: git_filter_source_repo
-  18: git_midx_writer_dump
-  19: BaseThreadInitThunk
-  20: RtlUserThreadStart
-    Checking enum1 v0.1.0 (C:\Users\Admin\Desktop\Poli\ProgrammazioneDiSistema\projects\enum1)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.69s
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking enum1 v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/enum1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s

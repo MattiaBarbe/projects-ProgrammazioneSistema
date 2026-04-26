@@ -1,0 +1,52 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   0.004810916s  INFO prepare_target{force=false package_id=traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs) target="traitEs"}: cargo::core::compiler::fingerprint: fingerprint error for traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs)/Check { test: false }/TargetInner { name: "traitEs", doc: true, ..: with_path("/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs/src/main.rs", Edition2024) }
+   0.004825208s  INFO prepare_target{force=false package_id=traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs) target="traitEs"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs/target/debug/.fingerprint/traitEs-ced922d0776efc16/bin-traitEs`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.012591625s  INFO prepare_target{force=false package_id=traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs) target="traitEs"}: cargo::core::compiler::fingerprint: fingerprint error for traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs)/Check { test: true }/TargetInner { name: "traitEs", doc: true, ..: with_path("/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs/src/main.rs", Edition2024) }
+   0.012599125s  INFO prepare_target{force=false package_id=traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs) target="traitEs"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs/target/debug/.fingerprint/traitEs-26e44ccd16ad8b2e/test-bin-traitEs`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: <std::backtrace::Backtrace>::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking traitEs v0.1.0 (/Users/mattiabarbero/Documents/Polito/ProgettazioneDiSistema/api/projects/traitEs)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.06s
